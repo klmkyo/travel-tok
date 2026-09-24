@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+/* Keep in sync with THEME_COLOR_VARIABLES in src/features/theme/constants/theme-colors.ts. */
+@theme static {
+  --color-primary-50: #effaff;
+  --color-primary-100: #d9f3ff;
+  --color-primary-200: #b5e7ff;
+  --color-primary-300: #80d5ff;
+  --color-primary-400: #4bc2fa;
+  --color-primary-500: #1baaf2;
+  --color-primary-600: #0787cc;
+  --color-primary-700: #0969a3;
+  --color-primary-800: #0c557f;
+  --color-primary-900: #104663;
+  --color-primary-950: #092b40;
+
+  --color-container-50: #f9fcff;
+  --color-container-100: #eef6fc;
+  --color-container-200: #dfedf6;
+  --color-container-300: #c8dce9;
+  --color-container-400: #a9c3d4;
+  --color-container-500: #83a3b8;
+  --color-container-600: #5f8198;
+  --color-container-700: #44657c;
+  --color-container-800: #2d4b61;
+  --color-container-900: #1b3448;
+  --color-container-950: #0d2030;
+
+  --color-base-50: #f9fcff;
+  --color-base-100: #edf6fc;
+  --color-base-200: #d6e7f1;
+  --color-base-300: #b2cddd;
+  --color-base-400: #89acc1;
+  --color-base-500: #648ba5;
+  --color-base-600: #466d88;
+  --color-base-700: #31546f;
+  --color-base-800: #203e57;
+  --color-base-900: #112c42;
+  --color-base-950: #091b2b;
+}

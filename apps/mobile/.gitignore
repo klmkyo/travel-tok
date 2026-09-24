@@ -1,0 +1,19 @@
+.expo/
+web-build/
+expo-env.d.ts
+
+# generated native folders
+/ios
+/android
+
+# Native credentials
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*

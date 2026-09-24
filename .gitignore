@@ -1,0 +1,15 @@
+node_modules/
+*.log
+dist/
+.expo/
+*.tsbuildinfo
+workbench/
+
+# Python
+__pycache__/
+*.py[cod]
+
+.env
+.env.*
+!.env.example
+.DS_Store

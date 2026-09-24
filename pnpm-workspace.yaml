@@ -1,0 +1,41 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+
+minimumReleaseAge: 4320
+
+minimumReleaseAgeExclude:
+  - '@expo/*'
+  - 'expo'
+  - 'expo-*'
+  - 'babel-preset-expo'
+  - 'react-native'
+  - 'react-native-*'
+  - '@react-native-*'
+  - '@oxlint/*'
+  - '@oxfmt/*'
+  - 'oxlint'
+  - 'oxfmt'
+  - 'oxlint-tsgolint'
+  - 'oxlint-config-universe'
+
+patchedDependencies:
+  react-native-svg@15.15.5: patches/react-native-svg@15.15.5.patch
+
+catalog:
+  '@t3-oss/env-core': ^0.13.11
+  zod: ^4.5.4
+  hono: ^4.13.8
+  better-auth: ^1.7.5
+  '@better-auth/expo': ^1.7.5
+  drizzle-kit: rc
+  drizzle-orm: rc
+
+# Keep Better Auth's optional Drizzle dependencies on the catalog versions.
+overrides:
+  drizzle-kit: 'catalog:'
+  drizzle-orm: 'catalog:'

@@ -1,0 +1,21 @@
+// Root project for the repo's own tooling files: the oxfmt/oxlint config modules in this
+// directory. Packages never extend this file. It sits next to tsconfig.base.json instead of
+// merging into it for two concrete reasons:
+//
+// 1. `extends` inherits include/exclude/files, so a package extending this file would silently
+//    pick up `include: ["*.ts", "*.mts", "*.cts"]` and the apps/packages excludes below instead
+//    of its own file scope.
+// 2. This project needs `allowImportingTsExtensions` because the oxfmt configs import
+//    './oxfmt.base.mts' (oxfmt evaluates .mts configs as native Node modules, where relative
+//    imports need the explicit extension). Emitting packages must not inherit that option:
+//    tsc rejects it without noEmit/emitDeclarationOnly (TS5096), and apps/backend compiles to
+//    dist/. Verified: merging the two files breaks apps/backend on that error.
+// Shared strictness defaults live in tsconfig.base.json.
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "allowImportingTsExtensions": true
+  },
+  "include": ["*.ts", "*.mts", "*.cts"],
+  "exclude": ["node_modules", "apps", "packages", "patches"]
+}
