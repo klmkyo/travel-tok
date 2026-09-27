@@ -4,12 +4,12 @@
 
 - pnpm workspace. Apps live in `apps/*` and packages shared between them live in `packages/*`.
 - `pnpm-workspace.yaml` holds every pnpm setting, not just the package globs: the `catalog` of shared dependency versions, `minimumReleaseAge`, `allowBuilds`, and `patchedDependencies`. Check it before adding a dependency.
-- `workbench/` is a gitignored scratchpad and deliberately not a workspace member. Nothing in it is imported, built, or kept.
+- `workbench/` is a space where different experiments are conducted, such as video download / analysis strategies.
 - Keep code in the app or package that uses it. Do not add anything to `packages/` until a second workspace package needs it.
 
 ## Before you finish
 
-Run the project checks after changing code:
+Run the project checks after changing relevant code:
 
 ```bash
 pnpm check

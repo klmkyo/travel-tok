@@ -3,7 +3,6 @@ node_modules/
 dist/
 .expo/
 *.tsbuildinfo
-workbench/
 
 # Python
 __pycache__/
