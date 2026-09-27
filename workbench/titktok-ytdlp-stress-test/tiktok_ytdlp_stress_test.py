@@ -1,5 +1,5 @@
 # /// script
-# requires-python = ">=3.11"
+# requires-python = ">=3.13.15,<3.14"
 # dependencies = ["yt-dlp[default,curl-cffi]", "rich>=13.7"]
 # ///
 """TikTok download stress test via yt-dlp.

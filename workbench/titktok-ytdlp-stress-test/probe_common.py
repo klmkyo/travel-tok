@@ -5,6 +5,7 @@ import re
 import statistics
 import threading
 import time
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -260,6 +261,7 @@ class Attempt:
             }
 
 
+@dataclass
 class Outcome:
     attempt: Attempt
     metrics: dict[str, Any]
