@@ -1,0 +1,1 @@
+- We definitely need to decouple what the user has saved and what is a result from a short analysis. The user should be able to edit whatever the short analysis gave them and use that instead.
